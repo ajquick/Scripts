@@ -8,7 +8,8 @@ p12_file_path=$script_folder/syno.p12
 # p12 password
 p12cert_password=xxxxxxxxxxxxxxxxxxxx
 # Synology's Default Let's encrypt folder
-letsencrypt_cert_folder=/usr/syno/etc/certificate/_archive/RANDOM FOLDER NAME
+random_folder=$(cat /usr/syno/etc/certificate/_archive/DEFAULT)
+letsencrypt_cert_folder=/usr/syno/etc/certificate/_archive/$random_folder
 # renew timestamp
 #renew_timestamp=renew_plex_timestamp
 
